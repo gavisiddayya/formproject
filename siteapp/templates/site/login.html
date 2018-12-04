@@ -1,0 +1,11 @@
+{% extends 'layout.html' %}
+{% block title %} employee site {% endblock %}
+{% block content %}
+{% load crispy_forms_tags %}
+<h1>LOGIN  FORM</h1>
+<h3>{{ msg }}</h3>
+<form action="" method="post" novalidate> {% csrf_token %}
+{{ form | crispy}}
+    <input type="submit"  value="LOGIN" class="btn btn-success">
+</form>
+{% endblock %}

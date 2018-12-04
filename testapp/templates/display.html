@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>practice</title>
+</head>
+<body>
+<h1>Customer details</h1>
+{% if ctr %}
+   <table border="1">
+       <thead>
+           <th>customer name</th>
+           <th>customer dob</th>
+           <th>customer age</th>
+           <th>customer email</th>
+           <th>customer mobno</th>
+       </thead>
+       {% for c in ctr %}
+       <tr>
+           <td>{{c.Name}}</td>
+           <td>{{c.dob}}</td>
+           <td>{{c.age}}</td>
+           <td>{{c.email}}</td>
+           <td>{{c.mobno}}</td>
+       </tr>
+       {%endfor%}
+   </table>
+   {%else%}
+       <p>no customer details</p>
+{%endif%}
+
+</body>
+</html>

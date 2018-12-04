@@ -1,0 +1,10 @@
+{% extends 'layout.html'%}
+{% block title %} customer details {% endblock %}
+{%  block content %}
+{% load crispy_forms_tags %}
+<form action="" method="post" novalidate> {% csrf_token %}
+    <h1>Customer details</h1>
+    {{ form | crispy }}
+<button type="submit">SUMBIT</button>
+</form>
+{% endblock %}
